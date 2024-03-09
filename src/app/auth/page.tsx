@@ -42,7 +42,7 @@ export default function AuthPage() {
         // Handle login
         const response = await axios.post("/api/users/login", user);
         console.log("Login successful:", response.data);
-        router.push("/profile")
+        router.push("/")
       }
     } catch (err: any) {
       console.warn("Authentication failed:", err);

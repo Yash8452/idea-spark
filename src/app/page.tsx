@@ -1,8 +1,16 @@
+import Navbar from "./components/Navbar";
 
 export default function Home() {
   return (
-    <main className="bg-orange-500 bg-gradient-to-tr from-orange-500 to-red-500 flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>Content in app-home</h1>
-    </main>
+    <>
+      <main className="flex min-h-screen flex-col items-center justify-between">
+        <h1>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis
+          illum fuga minima vero voluptatibus omnis dolore tempora quos
+          voluptatem quaerat, veritatis quis similique. Nobis porro iste ducimus
+          adipisci? Et, dignissimos?
+        </h1>
+      </main>
+    </>
   );
 }
