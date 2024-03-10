@@ -78,12 +78,6 @@ export function Leftbar() {
             >
               Setting
             </a>
-            <a
-              href="/profile"
-              className="block py-2.5 px-4 rounded hover:bg-blue-700 hover:text-white transition duration-200"
-            >
-              Profile
-            </a>
           </nav>
         </div>
         <button

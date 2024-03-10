@@ -59,7 +59,7 @@ export default function ProfilePage() {
         <>
           {user ? (
             <>
-              <div className="bg-white md:mx-auto rounded shadow-xl w-full overflow-hidden">
+              <div className="bg-white md:mx-auto rounded shadow-xl w-full ">
                 <div className="h-[140px] bg-gradient-to-r from-orange-500 to-red-500" />
                 <div className="px-5 py-2 flex flex-col gap-3 pb-6">
                   <div className="h-[90px] shadow-md w-[90px] rounded-full border-4 overflow-hidden -mt-14 border-white">

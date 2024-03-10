@@ -1,3 +1,5 @@
+"use client";
+import { useState } from "react";
 import { Badge } from "./components/Badge";
 import { CardContainer } from "./components/CardContainer";
 import { SearchBar } from "./components/SearchBar";

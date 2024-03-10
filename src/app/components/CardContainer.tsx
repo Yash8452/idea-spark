@@ -30,13 +30,33 @@ const cardData: CardData[] = [
     description: "Description 4",
     imageUrl: Snap,
   },
+  {
+    title: "Title 4",
+    description: "Description 4",
+    imageUrl: Snap,
+  },
+  {
+    title: "Title 4",
+    description: "Description 4",
+    imageUrl: Snap,
+  },
+  {
+    title: "Title 4",
+    description: "Description 4",
+    imageUrl: Snap,
+  },
+  {
+    title: "Title 4",
+    description: "Description 4",
+    imageUrl: Snap,
+  },
   // Add more card data as needed
 ];
 
 export function CardContainer() {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="flex flex-wrap items-center justify-center gap-6">
         {cardData.map((data, index) => (
           <Card key={index} {...data} />
         ))}
