@@ -29,6 +29,17 @@ export default function AuthPage() {
     setError("");
   };
 
+  const resetPassword = async () => {
+    try {
+      const response = await axios.post("/api/users/forgotPassword", {
+        email: user?.email,
+      });
+      console.log(response);
+    } catch (error: any) {
+      console.error("Error resetting password:", error.message);
+    }
+  };
+
   const handleSubmit = async (e: FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
     setIsLoading(true);
@@ -42,14 +53,14 @@ export default function AuthPage() {
         // Handle login
         const response = await axios.post("/api/users/login", user);
         console.log("Login successful:", response.data);
-        router.push("/")
+        router.push("/");
       }
     } catch (err: any) {
       console.warn("Authentication failed:", err);
       setError(err.response?.data?.message || "Authentication failed");
     } finally {
-      setIsLoading(false);
       setUser({ email: "", password: "", username: "" });
+      setIsLoading(false);
     }
   };
 
@@ -97,16 +108,31 @@ export default function AuthPage() {
 
         <div>
           {isSignup ? (
-            <p>
-              Already have an account?{" "}
-              <a className="cursor-pointer " onClick={() => setIsSignup(false)}>
-                Login
-              </a>
-            </p>
+            <>
+              <p>
+                Already have an account?{" "}
+                <a
+                  className="cursor-pointer "
+                  onClick={() => setIsSignup(false)}
+                >
+                  Login
+                </a>
+              </p>
+            </>
           ) : (
             <p>
+              <a
+                onClick={resetPassword}
+                className="cursor-pointer hover:underline"
+              >
+                Forgot Password
+              </a>
+              <br />
               Don't have an account?{" "}
-              <a className="cursor-pointer" onClick={() => setIsSignup(true)}>
+              <a
+                className="cursor-pointer hover:underline"
+                onClick={() => setIsSignup(true)}
+              >
                 Sign Up
               </a>
             </p>

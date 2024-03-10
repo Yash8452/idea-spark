@@ -8,10 +8,14 @@ export const metadata: Metadata = {
   description: "IdeaSpark: Ignite your next big idea.",
 };
 
-export default function AuthLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  return <div className={inter.className}>{children}</div>;
+  return (
+    <>
+      <div className={inter.className}> {children}</div>;
+    </>
+  );
 }
